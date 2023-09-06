@@ -1,27 +1,45 @@
-# Caesar Cipher Encryption & Decryption in C
-This program encrypts and decrypts a message using the Caesar Cipher algorithm. The user enters a message and a shift value, and the program applies the cipher. The encrypted message is then printed, and the program decrypts the message and prints it again. This implementation uses the C programming language.
+# Caesar Cipher
+
+A simple Caesar cipher implementation in C.
+
+## How to use
+
+1. Compile the code with the following command:
+
+`gcc caesar_cipher.c -o caesar_cipher`
 
 
-# Comments:
+2. Run the program with the following command:
 
-- The program uses the Caesar Cipher algorithm to encrypt and decrypt the message.
+`./caesar_cipher`
 
-- The caesar_cipher function takes two parameters: a string (the message to be encrypted/decrypted) and an integer (the shift value).
 
-- The for loop iterates through each character in the message.
+3. Enter the message you want to encrypt in the first prompt.
 
-- The isalpha function checks if the character is a letter.
+4. Enter the shift value in the second prompt.
 
-- If the character is uppercase, the ASCII value is converted to a number between 0 and 25 using 'A' as the reference point.
+5. The encrypted message will be printed to the console.
 
-- The shift is added to the number, and if it goes below 0, 26 is added to wrap around to the end of the alphabet.
+6. To decrypt the message, run the program again and enter the same message and shift value.
 
-- If the character is lowercase, the ASCII value is converted to a number between 0 and 25 using 'a' as the reference point.
+## Example
 
-- The shift is added to the number, and if it goes below 0, 26 is added to wrap around to the end of the alphabet.
+The following example encrypts the message "Hello, world!" with a shift value of 3:
+```
+./caesar_cipher
+Enter message: Hello, world!
+Enter shift: 3
+Encrypted message: Khoor, zloog!
+```
 
-- The encrypted message is printed.
+To decrypt the message, run the program again and enter the same message and shift value:
+```
+./caesar_cipher
+Enter message: Khoor, zloog!
+Enter shift: 3
+Decrypted message: Hello, world!
+```
 
-- The program then applies the same cipher to the encrypted message but with a negative shift value to decrypt it.
+## License
 
-- The decrypted message is printed.
+The Caesar cipher implementation is released under the MIT License.
